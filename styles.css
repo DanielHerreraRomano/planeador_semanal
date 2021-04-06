@@ -1,5 +1,77 @@
 html{
     font-size: 62.5%;
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(to right bottom, #000000, #2d262c, #4c4a5b, #5f748f, #68a4bd, #68a4bd, #68a4bd, #68a4bd, #5f748f, #4c4a5b, #2d262c, #000000);
+    display: grid;
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    height: 100px;
+    position: relative;
+    width: 100%;
+}
+​
+.card > div:first-child {
+    align-items: center;
+    border-radius: 16px;
+    display: flex;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    z-index: 1;
+}
+​
+.card > div:first-child p {
+    color: white;
+    margin: 0;
+    padding-right: 7px;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+}
+​
+.card > div:last-child {
+    border-radius: 16px;
+    display: grid;
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    justify-content: center;
+    z-index: 2;
+}
+​
+.card > div:last-child p:first-child {
+    font-size: 24px;
+    font-weight: 600; 
+    margin: 18px 0 -8px 0;
+}
+​
+.card > div:last-child p:last-child {
+    margin: 0;
+}
+​
+.margin-bottom-card {
+  margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+    height: 90%;
+    width: 80%;
+}
+
+.padding-box {
+    box-sizing: border-box;
+    padding: 24px;
 }
 
 .glassmorphism-effect {
@@ -9,4 +81,40 @@ html{
             backdrop-filter: blur( 4px );
     border-radius: 16px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.goals {
+    align-items: center;
+    display: flex;
+}
+​
+.goals div {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin-right: 10px;
+    width: 40px;
+}
+​
+.goals img {
+    width: 30px;
+}
+
+.main-content > div:nth-child(2) {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.title p:first-child {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+​
+.title p:last-child {
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
